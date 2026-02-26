@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation, Outlet } from 'react-router-dom';
+import logoImg from '../assets/prographyLogo.png';
 
 export default function MainLayout() {
     const navigate = useNavigate();
@@ -15,10 +16,14 @@ export default function MainLayout() {
         <div className="flex min-h-screen w-full bg-white">
             <aside className="w-72 bg-[#EFEFEF] border-r border-gray-300 p-10 flex flex-col sticky top-0 h-screen">
                 <div
-                    className="text-3xl font-bold mb-20 text-gray-700 cursor-pointer"
+                    className="mb-20 cursor-pointer"
                     onClick={() => navigate('/')}
                 >
-                    로고
+                    <img
+                        src={logoImg}
+                        alt="로고"
+                        className="w-32 h-auto object-contain"
+                    />
                 </div>
 
                 <nav>
@@ -43,7 +48,6 @@ export default function MainLayout() {
 
             <main className="flex-1 bg-white overflow-y-auto">
                 <div className="max-w-6xl mx-auto py-16 px-12">
-                    {/* {children} 대신 <Outlet /> 사용 */}
                     <Outlet />
                 </div>
             </main>

@@ -10,7 +10,8 @@
       "@/*": ["src/*"]
     },
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"], // 폴더 통째로 포함시켜버림
   "exclude": ["node_modules", "dist"]

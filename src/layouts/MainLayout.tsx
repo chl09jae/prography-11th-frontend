@@ -9,7 +9,6 @@ export default function MainLayout() {
     const menus = [
         { name: '회원 관리', path: '/members' },
         { name: '출결 관리', path: '/attendance' },
-        { name: '세션 관리', path: '/sessions' },
     ];
 
     return (
